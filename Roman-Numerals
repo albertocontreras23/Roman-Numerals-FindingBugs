@@ -34,6 +34,7 @@ bool getInput (string &input)
 
 int getDecimal (string input)
 {
+   // What happens when these buffers get filled up? Buffer Overflow in int or the arrays
    int rToI[128] = {0};
    int decimal[64];
    int total = 0;
