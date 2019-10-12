@@ -13,6 +13,15 @@ using namespace std;
 bool getInput (string &input)
 {
    bool dataToProcess = true;
+   
+   // BUG: The instructions say to enter "quit" suggesting that it should be written in
+   // in lowercase, but if the user types it in uppercase the program will also quit. This
+   // may or may not be the intended result, but the instructions when running the program are
+   // definitely unclear at best and suggest typing it in lowercase at worst. Either the instructions should
+   // be cleared up or the if statement could be placed before the for loop (and it should 
+   // be changed to check against the lowercase string) to more accurately check the input coming in from the user.
+   // Either way, moving the if statement before the for loop will get rid of the unnecissary steps if the user did
+   // type in the word quit
 
    cout << "Input: ";
    cin >> input;
